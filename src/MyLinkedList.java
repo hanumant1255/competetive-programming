@@ -13,6 +13,7 @@ public class MyLinkedList {
 		
 		list.remove("1");
 		list.remove(4.5);
+		list.remove(3);
 		System.out.println("After removing-Size of List");
 		list.print();
 
@@ -57,6 +58,9 @@ public void remove(T data) {
 		}else 	if(temp.data instanceof Double  &&  new BigDecimal(""+temp.data+"").compareTo(new BigDecimal(""+data+""))==0) {
 			remove(temp, prev);
 			return;
+		}else if(temp.data==data){
+			remove(temp, prev);
+            return;
 		}
 		prev=temp;
 		temp=temp.next;
