@@ -3,7 +3,7 @@ public class LongestSubstringWithoutRepeatingCharacters {
 
 	  public int lengthOfLongestSubstring(String s) {
 	        int max=0,curr=0; 
-			char []set=new char[125];
+			char []set=new char[126];
 			char[] arr=s.toCharArray();
 			int length=arr.length;
 			int asci=0;
